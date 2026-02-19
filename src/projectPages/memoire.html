@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script type="module" src="/src/main.js"></script>
+  <link rel="stylesheet" href="/src/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  
+  <style>
+    html, body {
+      font-family: 'Inter', sans-serif !important;
+    }
+
+    /* Logique d'affichage des onglets */
+    #tab-livrables:checked ~ .content-wrapper #content-livrables { display: grid; }
+    #tab-livrables:checked ~ .content-wrapper #content-recherches { display: none; }
+    #tab-livrables:checked ~ .content-wrapper #label-livrables { color: black; }
+    #tab-livrables:checked ~ .content-wrapper #label-recherches { color: #9ca3af; }
+
+    #tab-recherches:checked ~ .content-wrapper #content-recherches { display: grid; }
+    #tab-recherches:checked ~ .content-wrapper #content-livrables { display: none; }
+    #tab-recherches:checked ~ .content-wrapper #label-recherches { color: black; }
+    #tab-recherches:checked ~ .content-wrapper #label-livrables { color: #9ca3af; }
+
+    .hidden { display: none; }
+  </style>
+  <title>Charlotte Léger | Portfolio</title>
+</head>
+
+<body class="bg-white text-black antialiased">
+
+  <div class="max-w-[1400px] mx-auto px-6 pt-8">
+    <div class="border-b-[3px] border-black pb-4 flex justify-between items-end">
+      <a href="../works.html" class="text-[35px] font-extrabold hover:-translate-x-2 transition-transform duration-300 leading-none">
+        ←
+      </a>
+      <div class="flex space-x-8 text-[18px] font-extrabold tracking-[-0.07em] uppercase">
+        <a href="index.html" class="hover:opacity-50 transition">Projets</a>
+        <a href="#" class="hover:opacity-50 transition">À propos</a>
+      </div>
+    </div>
+  </div>
+
+  <main class="max-w-[1400px] mx-auto px-6 mt-10">
+    <input type="radio" name="project-view" id="tab-livrables" class="hidden" checked>
+    <input type="radio" name="project-view" id="tab-recherches" class="hidden">
+
+    <div class="content-wrapper flex flex-col md:flex-row gap-20">
+      
+      <div class="md:w-1/3">
+        <div class="md:sticky md:top-10">
+          <h1 class="text-[40px] font-extrabold tracking-[-0.07em] uppercase leading-none mb-1">
+            ESPACE TEMPS TYPOGRAPHIE
+          </h1>
+          
+          <p class="text-[22px] font-bold normal-case tracking-[-0.07em] mb-6 leading-[1.1]">
+            Recherches, Rédaction, Mise en page, Édition
+          </p>
+
+<p class="text-[18px] font-extrabold normal-case tracking-[-0.07em] mb-9 leading-[1.1]">
+            Contexte : <span class="text-gray-400 font-bold">Mémoire 3ème année</span><br>
+            Lieu : <span class="text-gray-400 font-bold">Paris</span>
+          </p>
+
+          <div class="flex flex-col space-y-1 mb-9 text-[18px] font-extrabold normal-case tracking-[-0.07em]">
+            <label for="tab-livrables" class="cursor-pointer hover:opacity-50 transition-opacity" id="label-livrables">➤ Livrables</label>
+            <label for="tab-recherches" class="cursor-pointer hover:opacity-50 transition-opacity" id="label-recherches">➤ Recherches</label>
+          </div>
+
+          <div class="max-w-sm">
+            <p class="text-[15px] text-gray-400 font-bold tracking-[-0.07em] leading-[1.1] text-left">
+              Ce mémoire de recherche explore les enjeux contemporains du graphisme à travers le prisme de la pop culture. L'objectif était d'analyser la typographie non plus comme un simple outil d'information, mais comme un véritable langage narratif au sein des génériques de films. L'enjeu éditorial consistait également à concevoir un objet de 10 000 signes reflétant visuellement cette thématique.<br>
+              <br>
+              Ma réflexion s'articule autour de deux axes : la typographie en tant qu'entité habitant l’espace de l'écran, puis sa transformation en "temps" par le mouvement. Pour l'objet éditorial, j'ai adopté les codes graphiques du scénario (format US Letter). La mise en page intègre des images imprimées sur papier néon, imitant l'esthétique des post-it pour souligner le caractère exploratoire et processuel de la recherche.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="md:w-2/3">
+        <div id="content-livrables" class="grid grid-cols-1 md:grid-cols-2 gap-3">
+          <img src="/assets/memoire.png" class="w-full h-auto" alt="Livrable Memoire">
+          </div>
+
+        <div id="content-recherches" class="hidden grid grid-cols-1 md:grid-cols-2 gap-3">
+          <div class="bg-gray-100 aspect-[3/4] flex items-center justify-center text-gray-400 font-bold uppercase tracking-tighter">Recherche 01</div>
+          <div class="bg-gray-100 aspect-[3/4] flex items-center justify-center text-gray-400 font-bold uppercase tracking-tighter">Recherche 02</div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+</body>
+</html>

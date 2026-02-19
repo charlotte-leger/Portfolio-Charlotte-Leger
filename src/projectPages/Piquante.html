@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script type="module" src="/src/main.js"></script>
+  <link rel="stylesheet" href="/src/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  
+  <style>
+    html, body {
+      font-family: 'Inter', sans-serif !important;
+    }
+
+    /* Logique d'affichage des onglets */
+    #tab-livrables:checked ~ .content-wrapper #content-livrables { display: grid; }
+    #tab-livrables:checked ~ .content-wrapper #content-recherches { display: none; }
+    #tab-livrables:checked ~ .content-wrapper #label-livrables { color: black; }
+    #tab-livrables:checked ~ .content-wrapper #label-recherches { color: #9ca3af; }
+
+    #tab-recherches:checked ~ .content-wrapper #content-recherches { display: grid; }
+    #tab-recherches:checked ~ .content-wrapper #content-livrables { display: none; }
+    #tab-recherches:checked ~ .content-wrapper #label-recherches { color: black; }
+    #tab-recherches:checked ~ .content-wrapper #label-livrables { color: #9ca3af; }
+
+    .hidden { display: none; }
+  </style>
+  <title>Charlotte Léger | Portfolio</title>
+</head>
+
+<body class="bg-white text-black antialiased">
+
+  <div class="max-w-[1400px] mx-auto px-6 pt-8">
+    <div class="border-b-[3px] border-black pb-4 flex justify-between items-end">
+      <a href="../works.html" class="text-[35px] font-extrabold hover:-translate-x-2 transition-transform duration-300 leading-none">
+        ←
+      </a>
+      <div class="flex space-x-8 text-[18px] font-extrabold tracking-[-0.07em] uppercase">
+        <a href="index.html" class="hover:opacity-50 transition">Projets</a>
+        <a href="#" class="hover:opacity-50 transition">À propos</a>
+      </div>
+    </div>
+  </div>
+
+  <main class="max-w-[1400px] mx-auto px-6 mt-10">
+    <input type="radio" name="project-view" id="tab-livrables" class="hidden" checked>
+    <input type="radio" name="project-view" id="tab-recherches" class="hidden">
+
+    <div class="content-wrapper flex flex-col md:flex-row gap-20">
+      
+      <div class="md:w-1/3">
+        <div class="md:sticky md:top-10">
+          <h1 class="text-[40px] font-extrabold tracking-[-0.07em] uppercase leading-none mb-1">
+            PIQUANTE
+          </h1>
+          
+          <p class="text-[22px] font-bold normal-case tracking-[-0.07em] mb-9 leading-[1.1]">
+            Typographie<br>
+          </p>
+
+          <p class="text-[18px] font-extrabold normal-case tracking-[-0.07em] mb-9 leading-[1.1]">
+            Contexte : <span class="text-gray-400 font-bold">Création Typographie modulaire</span><br>
+            Lieu : <span class="text-gray-400 font-bold">L'Initiative Paris</span>
+          </p>
+
+          <div class="flex flex-col space-y-1 mb-9 text-[18px] font-extrabold normal-case tracking-[-0.07em]">
+            <label for="tab-livrables" class="cursor-pointer hover:opacity-50 transition-opacity" id="label-livrables">➤ Livrables</label>
+            <label for="tab-recherches" class="cursor-pointer hover:opacity-50 transition-opacity" id="label-recherches">➤ Recherches</label>
+          </div>
+
+          <div class="max-w-sm">
+            <p class="text-[15px] text-gray-400 font-bold tracking-[-0.07em] leading-[1.1] text-left">
+              Développée dans le cadre de mes recherches de mémoire, « Piquante » est une typographie modulaire qui interroge la capacité de la lettre à transmettre une émotion par sa seule texture. L’enjeu était de dépasser la fonction de lecture pour explorer comment la matière typographique peut devenir le vecteur d'un sentiment complexe.<br>
+              <br>
+              J’ai construit cette typographie à partir d’une grille structurée par un point de fuite central, provoquant une déstructuration radicale de la lettre. Ce processus de destruction volontaire, associé à un travail sur la texture, confère à la typographie une dimension nerveuse. Le résultat final porte une charge sémantique, évoquant visuellement des sensations de tension et de colère.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="md:w-2/3">
+        <div id="content-livrables" class="grid grid-cols-1 md:grid-cols-2 gap-3">
+          <img src="/assets/piquantee9.png" class="w-full h-auto" alt="Piquante 1">
+          <img src="/assets/piquantepost.jpg" class="w-full h-auto" alt="Piquante 2">
+          <img src="/assets/piquantevid.png" class="w-full h-auto" alt="Piquante 3">
+          <video src="/assets/piquante-video.mp4" class="w-full h-auto" autoplay loop muted playsinline></video>
+        </div>
+
+        <div id="content-recherches" class="hidden grid grid-cols-1 md:grid-cols-2 gap-3">
+         <img src="/assets/piq.png" class="w-full h-auto" alt="Piquante 1">
+        </div>
+
+    </div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Charlotte Léger | Portfolio</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Application de la police Inter sur tout le site */
+        * { 
+            font-family: 'Inter', sans-serif !important; 
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: white;
+        }
+
+        .rotate-on-hover {
+            transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .rotate-on-hover:hover {
+            transform: rotate(360deg);
+        }
+
+        /* Optionnel : gestion du reveal si tu as une animation dans main.js */
+        .reveal {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div id="app">
+        
+        <header class="max-w-[1400px] mx-auto px-6 pt-8">
+            <div class="border-b-[3px] border-black pb-4 flex justify-end space-x-8 text-[18px] font-extrabold tracking-[-0.07em] uppercase">
+                <a href="/src/works.html" class="hover:opacity-50 transition">Projets</a>
+                <a href="/src/About.html" class="hover:opacity-50 transition">À propos</a>
+            </div>
+        </header>
+
+        <main class="max-w-[1400px] mx-auto px-6 mt-10">
+            <h1 class="reveal text-[55px] md:text-[65px] leading-[1.05] font-bold tracking-tight max-w-[1200px]">
+                Bonjour, je m’appelle <span class="italic text-[#D90000]">Charlotte Léger</span>, je suis en recherche d’une école ainsi que d’une alternance pour la <span class="italic text-[#D90000]">rentrée 2026</span>.
+            </h1>
+        </main>
+
+        <div class="flex justify-end max-w-full mx-auto px-6 -mt-17">
+            <div class="reveal"> 
+                <img 
+                    src="/assets/starillustration.png" 
+                    alt="Illustration" 
+                    class="rotate-on-hover w-80 md:w-[500px] opacity-90 cursor-pointer"
+                >
+            </div>
+        </div>
+
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+
+</body>
+</html>
