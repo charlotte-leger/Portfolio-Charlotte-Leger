@@ -1,105 +1,121 @@
 <!doctype html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  
+  <style>
+    html, body {
+      font-family: 'Inter', sans-serif !important;
+    }
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+  <title>Charlotte Léger | About</title>
+</head>
+
+<body class="bg-white text-black antialiased">
+
+  <div id="app" class="max-w-[1400px] mx-auto px-6 pt-8">
     
-    <script type="module" src="main.js"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    
-    <style>
-      html, body {
-        font-family: 'Inter', sans-serif !important;
-      }
-      .no-scrollbar::-webkit-scrollbar {
-        display: none;
-      }
-    </style>
-    <title>Charlotte Léger | About</title>
-  </head>
-  <body class="bg-white text-black antialiased">
-
-   <div id="app" class="max-w-[1400px] mx-auto px-6 pt-8">
-      
-      <div class="border-b-[3px] border-black pb-4 flex justify-between items-end mb-16">
-        
-        <a href="index.html" class="hover:opacity-50 transition">
-          <img src="../assets/Logo-cha.png" alt="Logo" class="h-9 w-auto"> 
-          </a>
-
-        <div class="flex space-x-8 text-[18px] font-extrabold tracking-[-0.07em] uppercase">
-          <a href="works.html" class="hover:opacity-50 transition">Projets</a>
-          <a href="About.html" class="hover:opacity-50 transition">À propos</a>
-        </div>
-
+    <div class="border-b-[3px] border-black pb-4 flex justify-between items-end mb-16">
+      <a href="index.html" class="hover:opacity-50 transition">
+        <img src="../assets/Logo-cha.png" alt="Logo" class="h-9 w-auto"> 
+      </a>
+      <div class="flex space-x-8 text-[18px] font-extrabold tracking-[-0.07em] uppercase">
+        <a href="works.html" class="hover:opacity-50 transition">Projets</a>
+        <a href="About.html" class="hover:opacity-50 transition">À propos</a>
       </div>
-      <div class="flex flex-col md:flex-row gap-20 items-start">
-        
-        <div class="w-full md:w-[450px] flex-shrink-0">
-          <div class="sticky top-24"> 
-            <video 
-              src="../assets/Autoportrait-Charlotte.mp4" 
-              class="w-full h-auto border-[3px] border-black" 
-              autoplay 
-              loop 
-              muted 
-              playsinline>
-            </video>
-          </div>
-        </div>
+    </div>
 
+    <div class="flex flex-col md:flex-row gap-20 items-start">
+      
+      <div class="w-full md:w-[450px] flex-shrink-0">
+        <div class="sticky top-24"> 
+          <video 
+            src="../assets/Autoportrait-Charlotte.mp4" 
+            class="w-full h-auto border-[3px] border-black" 
+            autoplay loop muted playsinline>
+          </video>
+        </div>
+      </div>
+
+      <div class="flex-grow flex flex-col lg:flex-row gap-10">
+        
         <div class="flex-grow">
-          <h1 class="text-[45px] font-extrabold tracking-[-0.07em] normal-case leading-none mb-0italic text-[#D9000span class=0]">
+          <h1 class="text-[45px] font-extrabold tracking-[-0.07em] uppercase leading-none mb-1">
             Charlotte Léger
           </h1>
-          
-          <div class="max-w-[450px]">
-            
-            <p class="text-[22px] font-bold normal-case tracking-[-0.07em] mb-8 leading-[1.1]">
+         <div class="max-w-[450px]">
+            <p class="text-[25px] font-bold normal-case tracking-[-0.07em] mb-8 leading-[1.1]">
               Étudiante en design graphique en recherche d'alternance
             </p>
          
-            <div class="text-[20px] text-gray-400 font-bold tracking-[-0.07em] leading-[1.1]">
+            <div class="text-[19px] text-gray-400 font-bold tracking-[-0.07em] leading-[1.1]">
               <p>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.
+                Passionnée par la recherche visuelle et la création d’identités fortes, je place l’expérimentation au cœur de ma démarche. Ma curiosité me pousse sans cesse à explorer de nouveaux univers et à découvrir de nouvelles manières de concevoir. Polyvalente, j'aime naviguer entre le print, le web, le montage vidéo et le motion design pour donner vie à des projets singuliers. Je cherche aujourd'hui une alternance pour approfondir mes connaissances et mettre cette soif de découverte au service de projets mémorables.
               </p>
             </div>
-
           </div>
         </div>
+       <style>
+  /* Définition de l'animation */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px); /* L'image part de 20px plus bas */
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0); /* Elle finit à sa place initiale */
+    }
+  }
 
-</div> <footer class="mt-24 w-full">
-    <div class="border-t-[3px] border-black pt-8 pb-8 w-full">
-        <div class="flex flex-row justify-between items-end w-full">
-            
-            <div class="text-left">
-                <h3 class="text-[25px] font-extrabold tracking-[-0.07em] uppercase leading-none">Charlotte Léger</h3>
-                <p class="text-[14px] font-bold tracking-tight text-gray-400 mt-2">
-                    En recherche d'alternance - 2026
-                </p>
-            </div>
+  /* Classe à appliquer sur l'image */
+  .reveal-img {
+    animation: fadeInUp 1s ease-out forwards;
+  }
+</style>
 
-            <div class="flex space-x-12 text-[16px] font-bold tracking-[-0.05em] normal-case">
-                <a href="mailto:charlootte.leger@gmail.com" class="hover:opacity-50 transition">charlootte.leger@gmail.com</a>
-                <a href="https://instagram.com/cha.lgr_" target="_blank" class="hover:opacity-50 transition">@cha.lgr_</a>
-                <a href="https://www.linkedin.com/in/charlotte-léger-327502250/" target="_blank" class="hover:opacity-50 transition">Linkedin</a>
-                <a href="../assets/CV-Charlotte-Leger-2026.pdf" target="_blank" class="hover:opacity-50 transition">Cv</a>
-            </div>
-
-            <div class="text-right">
-                <p class="text-[13px] font-bold tracking-tight normal-case">Paris, FR</p>
-                <p class="text-[11px] text-gray-400 font-medium mt-1">© 2026</p>
-            </div>
-
-        </div>
-    </div>
-</footer>
+<div class="w-full xl:w-[400px] flex-shrink-0 relative xl:-top-3"> 
+    <img src="../assets/a-propos.png" 
+         alt="Charlotte" 
+         class="w-full h-auto reveal-img"> </div>
 
       </div>
-   </div>
+    </div>
 
-  </body>
+    <footer class="mt-24 w-full">
+      <div class="border-t-[3px] border-black pt-8 pb-8 w-full">
+        <div class="flex flex-col md:flex-row justify-between items-end w-full gap-6">
+          <div class="text-left">
+            <h3 class="text-[25px] font-extrabold tracking-[-0.07em] uppercase leading-none">Charlotte Léger</h3>
+            <p class="text-[14px] font-bold tracking-tight text-gray-400 mt-2">
+              En recherche d'alternance - 2026
+            </p>
+          </div>
+
+          <div class="flex flex-wrap justify-center space-x-6 md:space-x-12 text-[16px] font-bold tracking-[-0.05em] normal-case">
+            <a href="mailto:charlootte.leger@gmail.com" class="hover:opacity-50 transition">charlootte.leger@gmail.com</a>
+            <a href="https://instagram.com/cha.lgr_" target="_blank" class="hover:opacity-50 transition">@cha.lgr_</a>
+            <a href="https://www.linkedin.com/in/charlotte-léger-327502250/" target="_blank" class="hover:opacity-50 transition">Linkedin</a>
+            <a href="../assets/CV-Charlotte-Leger-2026.pdf" target="_blank" class="hover:opacity-50 transition">Cv</a>
+          </div>
+
+          <div class="text-right">
+            <p class="text-[13px] font-bold tracking-tight normal-case">Paris, FR</p>
+            <p class="text-[11px] text-gray-400 font-medium mt-1">© 2026</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+</body>
 </html>
