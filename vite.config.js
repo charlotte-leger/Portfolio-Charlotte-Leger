@@ -6,8 +6,8 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
-        works: resolve(__dirname, 'src/works.html'),
-        about: resolve(__dirname, 'src/About.html'),
+        works: resolve(__dirname, 'src/src/works.html'),
+        about: resolve(__dirname, 'src/src/About.html'),
         sketchbook: resolve(__dirname, 'src/projectPages/Sketchbook.html'),
         biodiversite: resolve(__dirname, 'src/projectPages/Biodiversite.html'),
         citerouge: resolve(__dirname, 'src/projectPages/CiteRouge.html'),
