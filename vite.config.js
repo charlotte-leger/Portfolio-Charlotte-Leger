@@ -21,6 +21,7 @@ export default defineConfig({
             piquante: resolve(__dirname, 'src/projectPages/Piquante.html'),
             ruchespop: resolve(__dirname, 'src/projectPages/Ruchespop.html'),
             sound: resolve(__dirname, 'src/projectPages/Soundfrequencies.html'),
+            agenceumf: resolve(__dirname, 'src/projectPages/agenceumf.html'),
         },
         },
     },
