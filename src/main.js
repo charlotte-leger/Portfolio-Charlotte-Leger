@@ -3,7 +3,9 @@ import { gsap } from 'https://cdn.skypack.dev/gsap';
 import javascriptLogo from './javascript.svg'
 import viteLogo from '/vite.svg'
 import { setupCounter } from './counter.js'
-import "../assets/CV-Charlotte-Leger-2026.pdf";
+import cvPath from './assets/CV-Charlotte-Leger-2026.pdf'
+
+document.getElementById('cv-link').href = cvPath
 
 // On attend que le DOM soit chargé
 document.addEventListener("DOMContentLoaded", () => {
