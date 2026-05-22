@@ -48,9 +48,16 @@
       <a href="../../src/works.html" class="text-[35px] font-extrabold hover:-translate-x-2 transition-transform duration-300 leading-none">
         ←
       </a>
-     <div class="flex space-x-8 text-[18px] font-extrabold tracking-[-0.07em] uppercase">
-        <a href="../../src/works.html" class="hover:opacity-50 transition">Projets</a>
-        <a href="../../src/About.html" class="hover:opacity-50 transition">À propos</a>
+      <div class="flex space-x-4 text-[18px] font-extrabold tracking-[-0.07em] uppercase items-center">
+        <a href="../../src/works.html" class="hover:opacity-50 transition">
+            <span class="lang-fr">Projets</span><span class="lang-en hidden">Works</span>
+        </a>
+        <a href="../../src/About.html" class="hover:opacity-50 transition">
+            <span class="lang-fr">À propos</span><span class="lang-en hidden">About</span>
+        </a>
+        <button id="lang-switch" class="border-2 border-black px-2 py-0.5 hover:bg-black hover:text-white transition text-[14px] font-bold">
+            EN
+        </button>
       </div>
     </div>
   </header>
@@ -67,33 +74,49 @@
             Concert LPM 2026
           </h1>
           <p class="text-[22px] font-bold normal-case tracking-[-0.07em] mb-6 leading-[1.1]">
-            Identité Visuelle, Illustration, Motion Design
+            <span class="lang-fr">Identité Visuelle, Illustration, Motion Design</span>
+            <span class="lang-en hidden">Visual Identity, Illustration, Motion Design</span>
           </p>
 
           <p class="text-[18px] font-extrabold normal-case tracking-[-0.07em] mb-9 leading-[1.1]">
             Client : <span class="text-gray-400 font-bold">La Poste Mobile</span><br>
-            Lieu : <span class="text-gray-400 font-bold">La Felicità, Paris</span>
+            <span class="lang-fr">Lieu : <span class="text-gray-400 font-bold">La Felicità, Paris</span></span>
+            <span class="lang-en hidden">Location: <span class="text-gray-400 font-bold">La Felicità, Paris</span></span>
           </p>
 
           <div class="flex flex-col space-y-1 mb-9 text-[18px] font-extrabold normal-case tracking-[-0.07em]">
-            <label for="tab-livrables" class="cursor-pointer hover:opacity-50 transition-opacity" id="label-livrables">➤ Livrables</label>
-            <label for="tab-recherches" class="cursor-pointer hover:opacity-50 transition-opacity" id="label-recherches">➤ Recherches</label>
+            <label for="tab-livrables" class="cursor-pointer hover:opacity-50 transition-opacity" id="label-livrables">
+                <span class="lang-fr">➤ Livrables</span><span class="lang-en hidden">➤ Deliverables</span>
+            </label>
+            <label for="tab-recherches" class="cursor-pointer hover:opacity-50 transition-opacity" id="label-recherches">
+                <span class="lang-fr">➤ Recherches</span><span class="lang-en hidden">➤ Research</span>
+            </label>
           </div>
 
           <div class="max-w-sm">
             <div id="text-livrables-long">
-              <p class="text-[15px] text-gray-400 font-bold tracking-[-0.07em] leading-[1.1] text-left">
+              <p class="text-[15px] text-gray-400 font-bold tracking-[-0.07em] leading-[1.1] text-left lang-fr">
                 Chaque année, La Poste Mobile organise un événement d'envergure réunissant des artistes de renom. L'édition 2026 s'est déroulée en deux temps : une journée institutionnelle (PACS et Plénière) au MK2 BNF, suivie d'une soirée festive à La Felicità autour d'un set de Martin Solveig. La demande consistait à créer deux identités visuelles distinctes mais cohérentes, capables de fédérer les collaborateurs autour d'une ambiance festive et dynamique.<br>
                 <br>
                 J'ai conçu une série d'illustrations néons intégrant la dimension végétale de La Felicità. Ce déploiement visuel s'est décliné sur de nombreux supports : billetterie, DJ set, scénographie et motion design. Pour la partie institutionnelle, j'ai réinterprété le logotype LPM en créant un visuel "totem" composé d'éléments symboliques de l'entreprise.
               </p>
+              <p class="text-[15px] text-gray-400 font-bold tracking-[-0.07em] leading-[1.1] text-left lang-en hidden">
+                Every year, La Poste Mobile organizes a major event featuring renowned artists. The 2026 edition took place in two stages: an institutional day at MK2 BNF, followed by a festive evening at La Felicità featuring a set by Martin Solveig. The brief was to create two distinct but coherent visual identities capable of uniting employees around a festive and dynamic atmosphere.<br>
+                <br>
+                I designed a series of neon illustrations incorporating the botanical dimension of La Felicità. This visual rollout was applied across numerous formats: ticketing, DJ sets, scenography, and motion design. For the institutional part, I reinterpreted the LPM logo by creating a "totem" visual composed of symbolic corporate elements.
+              </p>
             </div>
 
             <div id="text-recherches-long" class="hidden">
-              <p class="text-[15px] text-gray-400 font-bold tracking-[-0.07em] leading-[1.1] text-left">
+              <p class="text-[15px] text-gray-400 font-bold tracking-[-0.07em] leading-[1.1] text-left lang-fr">
                 Le processus de création s'est articulé autour de la dualité entre rigueur institutionnelle et exubérance nocturne. Les recherches ont porté sur la colorimétrie néon pour faire vibrer les végétaux de la Felicità, ainsi que sur une refonte modulaire du logo pour les événements PACS.<br>
                 <br>
                 Les visuels "Save The Date" témoignent des itérations graphiques nécessaires pour trouver l'équilibre entre la clarté des informations et l'impact visuel requis pour un événement de cette ampleur.
+              </p>
+              <p class="text-[15px] text-gray-400 font-bold tracking-[-0.07em] leading-[1.1] text-left lang-en hidden">
+                The creative process centered on the duality between institutional rigor and nocturnal exuberance. Research focused on neon colorimetry to make La Felicità's greenery pop, as well as a modular redesign of the logo for institutional events.<br>
+                <br>
+                The "Save The Date" visuals demonstrate the graphic iterations required to find the balance between clarity of information and the visual impact needed for an event of this scale.
               </p>
             </div>
           </div>
@@ -126,12 +149,36 @@
   </main>
 
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const videos = document.querySelectorAll('video');
-        videos.forEach(video => {
-            video.play().catch(error => { console.log("Auto-play blocked"); });
+document.addEventListener('DOMContentLoaded', () => {
+    const langBtn = document.getElementById('lang-switch');
+    
+    function applyLanguage(lang) {
+        const frElements = document.querySelectorAll('.lang-fr');
+        const enElements = document.querySelectorAll('.lang-en');
+
+        if (lang === 'en') {
+            frElements.forEach(el => el.classList.add('hidden'));
+            enElements.forEach(el => el.classList.remove('hidden'));
+            if(langBtn) langBtn.innerText = 'FR';
+        } else {
+            enElements.forEach(el => el.classList.add('hidden'));
+            frElements.forEach(el => el.classList.remove('hidden'));
+            if(langBtn) langBtn.innerText = 'EN';
+        }
+    }
+
+    // Récupération immédiate au chargement
+    let currentLang = localStorage.getItem('selectedLang') || 'fr';
+    applyLanguage(currentLang);
+
+    if(langBtn) {
+        langBtn.addEventListener('click', () => {
+            currentLang = (currentLang === 'fr') ? 'en' : 'fr';
+            localStorage.setItem('selectedLang', currentLang);
+            applyLanguage(currentLang);
         });
-    });
-  </script>
+    }
+});
+</script>
 </body>
 </html>

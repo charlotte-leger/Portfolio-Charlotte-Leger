@@ -67,9 +67,16 @@
   <header class="sticky top-0 z-50 bg-white w-full">
     <div class="max-w-[1400px] mx-auto px-6 pt-8 pb-4 border-b-[3px] border-black flex justify-between items-end">
       <a href="../../src/works.html" class="text-[35px] font-extrabold hover:-translate-x-2 transition-transform duration-300 leading-none">←</a>
-      <div class="flex space-x-8 text-[18px] font-extrabold tracking-[-0.07em] uppercase">
-        <a href="../../src/works.html" class="hover:opacity-50 transition">Projets</a>
-        <a href="../../src/About.html" class="hover:opacity-50 transition">À propos</a>
+      <div class="flex space-x-4 text-[18px] font-extrabold tracking-[-0.07em] uppercase items-center">
+        <a href="../../src/works.html" class="hover:opacity-50 transition">
+          <span class="lang-fr">Projets</span><span class="lang-en hidden">Works</span>
+        </a>
+        <a href="../../src/About.html" class="hover:opacity-50 transition">
+          <span class="lang-fr">À propos</span><span class="lang-en hidden">About</span>
+        </a>
+        <button id="lang-switch" class="border-2 border-black px-2 py-0.5 hover:bg-black hover:text-white transition text-[14px] font-bold">
+            EN
+        </button>
       </div>
     </div>
   </header>
@@ -82,30 +89,47 @@
       
       <div class="md:w-1/3 md:sticky md:top-32 h-fit">
         <h1 class="text-[40px] font-extrabold tracking-[-0.07em] uppercase leading-none mb-1">LES RUCHES POP</h1>
-        <p class="text-[22px] font-bold normal-case tracking-[-0.07em] mb-6 leading-[1.1]">Identité Visuelle</p>
+        
+        <p class="text-[22px] font-bold normal-case tracking-[-0.07em] mb-6 leading-[1.1]">
+          <span class="lang-fr">Identité Visuelle</span>
+          <span class="lang-en hidden">Visual Identity</span>
+        </p>
 
         <p class="text-[18px] font-extrabold normal-case tracking-[-0.07em] mb-9 leading-[1.1]">
           Client : <span class="text-gray-400 font-bold">Association Les Ruches Pop</span><br>
-          Lieu : <span class="text-gray-400 font-bold">Paris 19e</span>
+          <span class="lang-fr">Lieu : <span class="text-gray-400 font-bold">Paris 19e</span></span>
+          <span class="lang-en hidden">Location: <span class="text-gray-400 font-bold">Paris 19th</span></span>
         </p>
 
         <div class="flex flex-col space-y-1 mb-9 text-[18px] font-extrabold normal-case tracking-[-0.07em]">
-          <label for="tab-livrables" class="cursor-pointer hover:opacity-50 transition-opacity" id="label-livrables">➤ Livrable</label>
-          <label for="tab-recherches" class="cursor-pointer hover:opacity-50 transition-opacity" id="label-recherches">➤ Recherches</label>
+          <label for="tab-livrables" class="cursor-pointer hover:opacity-50 transition-opacity" id="label-livrables">
+            <span class="lang-fr">➤ Livrable</span><span class="lang-en hidden">➤ Deliverable</span>
+          </label>
+          <label for="tab-recherches" class="cursor-pointer hover:opacity-50 transition-opacity" id="label-recherches">
+            <span class="lang-fr">➤ Recherches</span><span class="lang-en hidden">➤ Research</span>
+          </label>
         </div>
 
         <div class="max-w-sm">
           <div id="text-livrables-long">
-            <p class="text-[15px] text-gray-400 font-bold tracking-[-0.07em] leading-[1.1] text-left">
+            <p class="text-[15px] text-gray-400 font-bold tracking-[-0.07em] leading-[1.1] text-left lang-fr">
               Les Ruches Pop est une association d’apiculture urbaine biologique qui propose des formations et des ateliers pédagogiques dans une démarche engagée et joyeuse. L'objectif était de moderniser leur image pour mieux refléter cet esprit positif et bienveillant.<br><br>
               J'ai conçu un nouveau logotype ainsi qu'une charte graphique construits autour des notions de lien et de symbiose. En m'appuyant sur une palette de couleurs solaires et naturelles, j'ai décliné l'identité sur divers supports de communication pour traduire leur engagement écologique.
+            </p>
+            <p class="text-[15px] text-gray-400 font-bold tracking-[-0.07em] leading-[1.1] text-left lang-en hidden">
+              Les Ruches Pop is an organic urban beekeeping association that offers training and educational workshops with a committed and joyful approach. The goal was to modernize their image to better reflect this positive and caring spirit.<br><br>
+              I designed a new logotype and a brand identity built around the concepts of connection and symbiosis. Using a solar and natural color palette, I applied the identity across various communication materials to convey their ecological commitment.
             </p>
           </div>
 
           <div id="text-recherches-long" class="hidden">
-            <p class="text-[15px] text-gray-400 font-bold tracking-[-0.07em] leading-[1.1] text-left">
+            <p class="text-[15px] text-gray-400 font-bold tracking-[-0.07em] leading-[1.1] text-left lang-fr">
               La phase de recherche a exploré la géométrie de la ruche et la fluidité organique de la nature. L'enjeu était d'éviter les clichés de l'apiculture classique pour tendre vers une esthétique plus "pop" et dynamique.<br><br>
               Les croquis montrent l'évolution du signe : du figuratif vers une synthèse graphique symbolisant à la fois l'alvéole et le réseau social que crée l'association dans le 19ème arrondissement.
+            </p>
+            <p class="text-[15px] text-gray-400 font-bold tracking-[-0.07em] leading-[1.1] text-left lang-en hidden">
+              The research phase explored the geometry of the beehive and the organic fluidity of nature. The challenge was to avoid classical beekeeping clichés and move toward a more "pop" and dynamic aesthetic.<br><br>
+              The sketches show the evolution of the symbol: from figurative to a graphic synthesis representing both the honeycomb cell and the social network created by the association in the 19th arrondissement.
             </p>
           </div>
         </div>
@@ -149,26 +173,36 @@
   </main>
 
   <script>
-    let currentSlide = 0;
-    const slides = document.querySelectorAll('.slide');
-    const prevBtn = document.querySelector('.nav-btn.prev');
-    const nextBtn = document.querySelector('.nav-btn.next');
+document.addEventListener('DOMContentLoaded', () => {
+    const langBtn = document.getElementById('lang-switch');
+    
+    function applyLanguage(lang) {
+        const frElements = document.querySelectorAll('.lang-fr');
+        const enElements = document.querySelectorAll('.lang-en');
 
-    function updateNav() {
-        slides.forEach((s, i) => s.classList.toggle('active', i === currentSlide));
-        if(currentSlide === 0) prevBtn.classList.add('disabled');
-        else prevBtn.classList.remove('disabled');
-        if(currentSlide === slides.length - 1) nextBtn.classList.add('disabled');
-        else nextBtn.classList.remove('disabled');
-    }
-
-    window.changeSlide = function(direction) {
-        const newSlide = currentSlide + direction;
-        if (newSlide >= 0 && newSlide < slides.length) {
-            currentSlide = newSlide;
-            updateNav();
+        if (lang === 'en') {
+            frElements.forEach(el => el.classList.add('hidden'));
+            enElements.forEach(el => el.classList.remove('hidden'));
+            if(langBtn) langBtn.innerText = 'FR';
+        } else {
+            enElements.forEach(el => el.classList.add('hidden'));
+            frElements.forEach(el => el.classList.remove('hidden'));
+            if(langBtn) langBtn.innerText = 'EN';
         }
     }
-  </script>
+
+    // Récupération immédiate au chargement
+    let currentLang = localStorage.getItem('selectedLang') || 'fr';
+    applyLanguage(currentLang);
+
+    if(langBtn) {
+        langBtn.addEventListener('click', () => {
+            currentLang = (currentLang === 'fr') ? 'en' : 'fr';
+            localStorage.setItem('selectedLang', currentLang);
+            applyLanguage(currentLang);
+        });
+    }
+});
+</script>
 </body>
 </html>

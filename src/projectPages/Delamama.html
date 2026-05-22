@@ -48,9 +48,16 @@
       <a href="../../src/works.html" class="text-[35px] font-extrabold hover:-translate-x-2 transition-transform duration-300 leading-none">
         ←
       </a>
-      <div class="flex space-x-8 text-[18px] font-extrabold tracking-[-0.07em] uppercase">
-        <a href="../../src/works.html" class="hover:opacity-50 transition">Projets</a>
-        <a href="../../src/About.html" class="hover:opacity-50 transition">À propos</a>
+      <div class="flex space-x-4 text-[18px] font-extrabold tracking-[-0.07em] uppercase items-center">
+        <a href="../../src/works.html" class="hover:opacity-50 transition">
+            <span class="lang-fr">Projets</span><span class="lang-en hidden">Works</span>
+        </a>
+        <a href="../../src/About.html" class="hover:opacity-50 transition">
+            <span class="lang-fr">À propos</span><span class="lang-en hidden">About</span>
+        </a>
+        <button id="lang-switch" class="border-2 border-black px-2 py-0.5 hover:bg-black hover:text-white transition text-[14px] font-bold">
+            EN
+        </button>
       </div>
     </div>
   </header>
@@ -68,33 +75,49 @@
           </h1>
           
           <p class="text-[22px] font-bold normal-case tracking-[-0.07em] mb-6 leading-[1.1]">
-            Identité Visuelle, Illustration, Montage vidéo, Motion Design, Retouches photo
+            <span class="lang-fr">Identité Visuelle, Illustration, Montage vidéo, Motion Design, Retouches photo</span>
+            <span class="lang-en hidden">Visual Identity, Illustration, Video Editing, Motion Design, Photo Retouching</span>
           </p>
 
           <p class="text-[18px] font-extrabold normal-case tracking-[-0.07em] mb-9 leading-[1.1]">
             Client : <span class="text-gray-400 font-bold">A&R studios, Universal Music France</span><br>
-            Lieu : <span class="text-gray-400 font-bold">Paris</span>
+            <span class="lang-fr">Lieu : <span class="text-gray-400 font-bold">Paris</span></span>
+            <span class="lang-en hidden">Location: <span class="text-gray-400 font-bold">Paris</span></span>
           </p>
 
           <div class="flex flex-col space-y-1 mb-9 text-[18px] font-extrabold normal-case tracking-[-0.07em]">
-            <label for="tab-livrables" class="cursor-pointer hover:opacity-50 transition-opacity" id="label-livrables">➤ Livrables</label>
-            <label for="tab-recherches" class="cursor-pointer hover:opacity-50 transition-opacity" id="label-recherches">➤ Recherches</label>
+            <label for="tab-livrables" class="cursor-pointer hover:opacity-50 transition-opacity" id="label-livrables">
+                <span class="lang-fr">➤ Livrables</span><span class="lang-en hidden">➤ Deliverables</span>
+            </label>
+            <label for="tab-recherches" class="cursor-pointer hover:opacity-50 transition-opacity" id="label-recherches">
+                <span class="lang-fr">➤ Recherches</span><span class="lang-en hidden">➤ Research</span>
+            </label>
           </div>
 
-          <div class="max-w-sm">
+          <div class="max-sm">
             <div id="text-livrables-long">
-              <p class="text-[15px] text-gray-400 font-bold tracking-[-0.07em] leading-[1.1] text-left">
+              <p class="text-[15px] text-gray-400 font-bold tracking-[-0.07em] leading-[1.1] text-left lang-fr">
                 Initiée lors de mon stage au sein du studio créatif d’Universal Music A&R studios, ma collaboration avec Pizza Delamama s'est poursuivie sur le long terme. L'enjeu est de nourrir l'identité décalée et humoristique de la marque à travers des contenus hebdomadaires réactifs aux tendances des réseaux sociaux.<br>
                 <br>
                 En étroite collaboration avec l'équipe créative, j'assure l'exécution de supports variés : illustrations, montages photo et vidéo, retouches et motion design. Mon rôle est de traduire des briefs conceptuels en visuels percutants, tout en conservant l'ADN disruptif de la marque.
               </p>
+              <p class="text-[15px] text-gray-400 font-bold tracking-[-0.07em] leading-[1.1] text-left lang-en hidden">
+                Initiated during my internship at Universal Music's creative studio A&R studios, my collaboration with Pizza Delamama has continued over the long term. The challenge is to nourish the brand's quirky and humorous identity through weekly content reactive to social media trends.<br>
+                <br>
+                Working closely with the creative team, I handle the execution of various assets: illustrations, photo and video editing, retouching, and motion design. My role is to translate conceptual briefs into striking visuals while maintaining the brand's disruptive DNA.
+              </p>
             </div>
 
             <div id="text-recherches-long" class="hidden">
-              <p class="text-[15px] text-gray-400 font-bold tracking-[-0.07em] leading-[1.1] text-left">
-                L’enjeu principal de ce projet était de respecter l'identité forte de Mister V et son public "core", tout en proposant une esthétique capable de séduire une audience plus large. Cette exigence impose une précision dans les choix graphiques pour rester authentique sans être exclusif.
-Cette mission m’a permis de confronter mes intentions créatives aux réalités stratégiques d'une marque. Certains essais, n'ont pas été retenus car ils s'écartaient de ce positionnement spécifique. Ces itérations ont été essentielles pour affiner la réponse visuelle finale et m'ont permis de mieux appréhender les compromis nécessaires entre audace créative et objectifs marketing.
-
+              <p class="text-[15px] text-gray-400 font-bold tracking-[-0.07em] leading-[1.1] text-left lang-fr">
+                L’enjeu principal de ce projet était de respecter l'identité forte de Mister V et son public "core", tout en proposant une esthétique capable de séduire une audience plus large. Cette exigence impose une précision dans les choix graphiques pour rester authentique sans être exclusif.<br>
+                <br>
+                Cette mission m’a permis de confronter mes intentions créatives aux réalités stratégiques d'une marque. Certains essais n'ont pas été retenus car ils s'écartaient de ce positionnement spécifique. Ces itérations ont été essentielles pour affiner la réponse visuelle finale et m'ont permis de mieux appréhender les compromis nécessaires entre audace créative et objectifs marketing.
+              </p>
+              <p class="text-[15px] text-gray-400 font-bold tracking-[-0.07em] leading-[1.1] text-left lang-en hidden">
+                The main challenge of this project was to respect Mister V's strong identity and his "core" audience, while proposing an aesthetic capable of appealing to a wider public. This required precision in graphic choices to remain authentic without being exclusive.<br>
+                <br>
+                This mission allowed me to confront my creative intentions with the strategic realities of a brand. Some trials were not selected because they strayed from this specific positioning. These iterations were essential to refine the final visual response and helped me better understand the necessary compromises between creative boldness and marketing objectives.
               </p>
             </div>
           </div>
@@ -128,12 +151,36 @@ Cette mission m’a permis de confronter mes intentions créatives aux réalité
   </main>
 
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const videos = document.querySelectorAll('video');
-        videos.forEach(video => {
-            video.play().catch(error => { console.log("Auto-play blocked"); });
+document.addEventListener('DOMContentLoaded', () => {
+    const langBtn = document.getElementById('lang-switch');
+    
+    function applyLanguage(lang) {
+        const frElements = document.querySelectorAll('.lang-fr');
+        const enElements = document.querySelectorAll('.lang-en');
+
+        if (lang === 'en') {
+            frElements.forEach(el => el.classList.add('hidden'));
+            enElements.forEach(el => el.classList.remove('hidden'));
+            if(langBtn) langBtn.innerText = 'FR';
+        } else {
+            enElements.forEach(el => el.classList.add('hidden'));
+            frElements.forEach(el => el.classList.remove('hidden'));
+            if(langBtn) langBtn.innerText = 'EN';
+        }
+    }
+
+    // Récupération immédiate au chargement
+    let currentLang = localStorage.getItem('selectedLang') || 'fr';
+    applyLanguage(currentLang);
+
+    if(langBtn) {
+        langBtn.addEventListener('click', () => {
+            currentLang = (currentLang === 'fr') ? 'en' : 'fr';
+            localStorage.setItem('selectedLang', currentLang);
+            applyLanguage(currentLang);
         });
-    });
-  </script>
+    }
+});
+</script>
 </body>
 </html>

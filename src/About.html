@@ -15,6 +15,9 @@
     .no-scrollbar::-webkit-scrollbar {
       display: none;
     }
+    .hidden {
+      display: none;
+    }
   </style>
   <title>Charlotte Léger | About</title>
 </head>
@@ -23,13 +26,19 @@
 
   <div id="app" class="max-w-[1400px] mx-auto px-6 pt-8">
     
+    <!-- HEADER AVEC SWITCH LANGUE -->
     <div class="border-b-[3px] border-black pb-4 flex justify-between items-end mb-16">
       <a href="../index.html" class="hover:opacity-50 transition">
         <img src="../assets/Logo-cha.png" alt="Logo" class="h-9 w-auto"> 
       </a>
-      <div class="flex space-x-8 text-[18px] font-extrabold tracking-[-0.07em] uppercase">
-        <a href="../../src/works.html" class="hover:opacity-50 transition">Projets</a>
-        <a href="../../src/About.html" class="hover:opacity-50 transition">À propos</a>
+      <div class="flex space-x-8 text-[18px] font-extrabold tracking-[-0.07em] uppercase items-center">
+        <a href="../../src/works.html" class="hover:opacity-50 transition">
+            <span class="lang-fr">Projets</span><span class="lang-en hidden">Works</span>
+        </a>
+        <a href="../../src/About.html" class="hover:opacity-50 transition">
+            <span class="lang-fr">À propos</span><span class="lang-en hidden">About</span>
+        </a>
+        <button id="lang-switch" class="border-2 border-black px-2 py-0.5 hover:bg-black hover:text-white transition text-[14px] font-bold">EN</button>
       </div>
     </div>
 
@@ -53,50 +62,49 @@
           </h1>
          <div class="max-w-[450px]">
             <p class="text-[25px] font-bold normal-case tracking-[-0.07em] mb-8 leading-[1.1]">
-              Étudiante en design graphique en recherche d'alternance
+              <span class="lang-fr">Étudiante en design graphique en recherche d'alternance</span>
+              <span class="lang-en hidden">Graphic design student looking for an apprenticeship</span>
             </p>
          
             <div class="text-[19px] text-gray-400 font-bold tracking-[-0.07em] leading-[1.1]">
-              <p>
+              <p class="lang-fr">
                 Passionnée par la recherche visuelle et la création d’identités fortes, je place l’expérimentation au cœur de ma démarche. Ma curiosité me pousse sans cesse à explorer de nouveaux univers et à découvrir de nouvelles manières de concevoir. Polyvalente, j'aime naviguer entre le print, le web, le montage vidéo et le motion design pour donner vie à des projets singuliers. Je cherche aujourd'hui une alternance pour approfondir mes connaissances et mettre cette soif de découverte au service de projets mémorables.
+              </p>
+              <p class="lang-en hidden">
+                Passionate about visual research and creating strong identities, I place experimentation at the heart of my approach. My curiosity constantly drives me to explore new worlds and discover new ways of designing. Versatile, I enjoy navigating between print, web, video editing, and motion design to bring unique projects to life. I am currently looking for an apprenticeship to deepen my knowledge and put this thirst for discovery at the service of memorable projects.
               </p>
             </div>
           </div>
         </div>
-       <style>
-  /* Définition de l'animation */
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(20px); /* L'image part de 20px plus bas */
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0); /* Elle finit à sa place initiale */
-    }
-  }
 
-  /* Classe à appliquer sur l'image */
-  .reveal-img {
-    animation: fadeInUp 1s ease-out forwards;
-  }
-</style>
+        <style>
+          @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+          }
+          .reveal-img { animation: fadeInUp 1s ease-out forwards; }
+        </style>
 
-<div class="w-full xl:w-[400px] flex-shrink-0 relative xl:-top-3"> 
-    <img src="../assets/a-propos.png" 
-         alt="Charlotte" 
-         class="w-full h-auto reveal-img"> </div>
+        <div class="w-full xl:w-[400px] flex-shrink-0 relative xl:-top-3"> 
+    <!-- Image en Français -->
+    <img src="../assets/a-propos.png" alt="Charlotte" class="w-full h-auto reveal-img lang-fr"> 
+    
+    <!-- Image en Anglais (cachée par défaut) -->
+    <img src="../assets/a-about.png" alt="Charlotte" class="w-full h-auto reveal-img lang-en hidden"> 
+</div>
 
       </div>
     </div>
 
+    <!-- FOOTER -->
     <footer class="mt-24 w-full">
       <div class="border-t-[3px] border-black pt-8 pb-8 w-full">
         <div class="flex flex-col md:flex-row justify-between items-end w-full gap-6">
           <div class="text-left">
             <h3 class="text-[25px] font-extrabold tracking-[-0.07em] uppercase leading-none">Charlotte Léger</h3>
             <p class="text-[14px] font-bold tracking-tight text-gray-400 mt-2">
-              En recherche d'alternance - 2026
+              <span class="lang-fr">En recherche d'alternance - 2026</span>
+              <span class="lang-en hidden">Looking for an apprenticeship - 2026</span>
             </p>
           </div>
 
@@ -116,6 +124,40 @@
     </footer>
 
   </div>
+
+  <!-- SCRIPT DE TRADUCTION -->
+  <script>
+document.addEventListener('DOMContentLoaded', () => {
+    const langBtn = document.getElementById('lang-switch');
+    
+    function applyLanguage(lang) {
+        const frElements = document.querySelectorAll('.lang-fr');
+        const enElements = document.querySelectorAll('.lang-en');
+
+        if (lang === 'en') {
+            frElements.forEach(el => el.classList.add('hidden'));
+            enElements.forEach(el => el.classList.remove('hidden'));
+            if(langBtn) langBtn.innerText = 'FR';
+        } else {
+            enElements.forEach(el => el.classList.add('hidden'));
+            frElements.forEach(el => el.classList.remove('hidden'));
+            if(langBtn) langBtn.innerText = 'EN';
+        }
+    }
+
+    // Récupération immédiate au chargement
+    let currentLang = localStorage.getItem('selectedLang') || 'fr';
+    applyLanguage(currentLang);
+
+    if(langBtn) {
+        langBtn.addEventListener('click', () => {
+            currentLang = (currentLang === 'fr') ? 'en' : 'fr';
+            localStorage.setItem('selectedLang', currentLang);
+            applyLanguage(currentLang);
+        });
+    }
+});
+</script>
 
 </body>
 </html>

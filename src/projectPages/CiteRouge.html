@@ -48,9 +48,16 @@
       <a href="../../src/works.html" class="text-[35px] font-extrabold hover:-translate-x-2 transition-transform duration-300 leading-none">
         ←
       </a>
-      <div class="flex space-x-8 text-[18px] font-extrabold tracking-[-0.07em] uppercase">
-        <a href="../../src/works.html" class="hover:opacity-50 transition">Projets</a>
-        <a href="../../src/About.html" class="hover:opacity-50 transition">À propos</a>
+      <div class="flex space-x-4 text-[18px] font-extrabold tracking-[-0.07em] uppercase items-center">
+        <a href="../../src/works.html" class="hover:opacity-50 transition">
+          <span class="lang-fr">Projets</span><span class="lang-en hidden">Works</span>
+        </a>
+        <a href="../../src/About.html" class="hover:opacity-50 transition">
+          <span class="lang-fr">À propos</span><span class="lang-en hidden">About</span>
+        </a>
+        <button id="lang-switch" class="border-2 border-black px-2 py-0.5 hover:bg-black hover:text-white transition text-[14px] font-bold">
+            EN
+        </button>
       </div>
     </div>
   </header>
@@ -68,33 +75,50 @@
           </h1>
           
           <p class="text-[22px] font-bold normal-case tracking-[-0.07em] mb-9 leading-[1.1]">
-            Identité Visuelle, Scenographie<br>
+            <span class="lang-fr">Identité Visuelle, Scénographie</span>
+            <span class="lang-en hidden">Visual Identity, Scenography</span>
           </p>
 
           <p class="text-[18px] font-extrabold normal-case tracking-[-0.07em] mb-9 leading-[1.1]">
-            Contexte : <span class="text-gray-400 font-bold">Stage chez Fabrication Maison</span><br>
-            Lieu : <span class="text-gray-400 font-bold">La Cité Rouge, Paris 19e</span>
+            <span class="lang-fr">Contexte : <span class="text-gray-400 font-bold">Stage chez Fabrication Maison</span></span>
+            <span class="lang-en hidden">Context: <span class="text-gray-400 font-bold">Internship at Fabrication Maison</span></span><br>
+            <span class="lang-fr">Lieu : <span class="text-gray-400 font-bold">La Cité Rouge, Paris 19e</span></span>
+            <span class="lang-en hidden">Location: <span class="text-gray-400 font-bold">La Cité Rouge, Paris 19th</span></span>
           </p>
 
           <div class="flex flex-col space-y-1 mb-9 text-[18px] font-extrabold normal-case tracking-[-0.07em]">
-            <label for="tab-livrables" class="cursor-pointer hover:opacity-50 transition-opacity" id="label-livrables">➤ Livrables</label>
-            <label for="tab-recherches" class="cursor-pointer hover:opacity-50 transition-opacity" id="label-recherches">➤ Recherches</label>
+            <label for="tab-livrables" class="cursor-pointer hover:opacity-50 transition-opacity" id="label-livrables">
+                <span class="lang-fr">➤ Livrables</span><span class="lang-en hidden">➤ Deliverables</span>
+            </label>
+            <label for="tab-recherches" class="cursor-pointer hover:opacity-50 transition-opacity" id="label-recherches">
+                <span class="lang-fr">➤ Recherches</span><span class="lang-en hidden">➤ Research</span>
+            </label>
           </div>
 
           <div class="max-w-sm">
             <div id="text-livrables-long">
-              <p class="text-[15px] text-gray-400 font-bold tracking-[-0.07em] leading-[1.1] text-left">
+              <p class="text-[15px] text-gray-400 font-bold tracking-[-0.07em] leading-[1.1] text-left lang-fr">
                 Dans le cadre d'un stage de deuxième année, l'ensemble de notre promotion a été accueilli par le collectif Fabrication Maison afin de participer à la clôture de leur projet à la Cité Rouge, dans le 19ème arrondissement de Paris. L'objectif était de concevoir l'identité visuelle et la scénographie d'un événement de restitution retraçant les nombreuses interventions menées par le collectif au cœur du quartier.<br>
                 <br>
                 Pour répondre à cette demande, nous avons travaillé en groupe sur la création des supports de communication, notamment les affiches et les flyers. Parallèlement à ce travail sur le support papier, nous avons conçu une scénographie centrée sur l’interactivité et la participation collective.
               </p>
+              <p class="text-[15px] text-gray-400 font-bold tracking-[-0.07em] leading-[1.1] text-left lang-en hidden">
+                As part of a second-year internship, our entire class was hosted by the Fabrication Maison collective to participate in the closing of their project at La Cité Rouge, in Paris's 19th arrondissement. The goal was to design the visual identity and scenography for a showcase event tracing the many interventions carried out by the collective in the heart of the neighborhood.<br>
+                <br>
+                To meet this request, we worked in groups to create communication materials, including posters and flyers. Alongside this print work, we designed a scenography focused on interactivity and collective participation.
+              </p>
             </div>
 
             <div id="text-recherches-long" class="hidden">
-              <p class="text-[15px] text-gray-400 font-bold tracking-[-0.07em] leading-[1.1] text-left">
+              <p class="text-[15px] text-gray-400 font-bold tracking-[-0.07em] leading-[1.1] text-left lang-fr">
                 La phase de recherche a été guidée par l'architecture singulière et l'histoire humaine de la Cité Rouge. Nous avons exploré des motifs inspirés de la structure des bâtiments et de la couleur dominante du quartier pour créer un système graphique modulaire.<br>
                 <br>
                 Les croquis et scans présentent les premières pistes de médiation culturelle : comment transformer des archives en objets tangibles et ludiques ? Le travail sur la typographie et les motifs visait à créer une identité qui soit à la fois institutionnelle pour le collectif et chaleureuse pour les habitants.
+              </p>
+              <p class="text-[15px] text-gray-400 font-bold tracking-[-0.07em] leading-[1.1] text-left lang-en hidden">
+                The research phase was guided by the unique architecture and human history of La Cité Rouge. We explored patterns inspired by the building structures and the dominant color of the neighborhood to create a modular graphic system.<br>
+                <br>
+                The sketches and scans show the initial paths of cultural mediation: how to transform archives into tangible and playful objects? The work on typography and patterns aimed to create an identity that was both institutional for the collective and welcoming for the residents.
               </p>
             </div>
           </div>
@@ -126,12 +150,36 @@
   </main>
 
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const videos = document.querySelectorAll('video');
-        videos.forEach(video => {
-            video.play().catch(error => { console.log("Auto-play blocked"); });
+document.addEventListener('DOMContentLoaded', () => {
+    const langBtn = document.getElementById('lang-switch');
+    
+    function applyLanguage(lang) {
+        const frElements = document.querySelectorAll('.lang-fr');
+        const enElements = document.querySelectorAll('.lang-en');
+
+        if (lang === 'en') {
+            frElements.forEach(el => el.classList.add('hidden'));
+            enElements.forEach(el => el.classList.remove('hidden'));
+            if(langBtn) langBtn.innerText = 'FR';
+        } else {
+            enElements.forEach(el => el.classList.add('hidden'));
+            frElements.forEach(el => el.classList.remove('hidden'));
+            if(langBtn) langBtn.innerText = 'EN';
+        }
+    }
+
+    // Récupération immédiate au chargement
+    let currentLang = localStorage.getItem('selectedLang') || 'fr';
+    applyLanguage(currentLang);
+
+    if(langBtn) {
+        langBtn.addEventListener('click', () => {
+            currentLang = (currentLang === 'fr') ? 'en' : 'fr';
+            localStorage.setItem('selectedLang', currentLang);
+            applyLanguage(currentLang);
         });
-    });
-  </script>
+    }
+});
+</script>
 </body>
 </html>

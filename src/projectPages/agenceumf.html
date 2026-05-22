@@ -48,9 +48,16 @@
       <a href="../../src/works.html" class="text-[35px] font-extrabold hover:-translate-x-2 transition-transform duration-300 leading-none">
         ←
       </a>
-      <div class="flex space-x-8 text-[18px] font-extrabold tracking-[-0.07em] uppercase">
-        <a href="../../src/works.html" class="hover:opacity-50 transition">Projets</a>
-        <a href="../../src/About.html" class="hover:opacity-50 transition">À propos</a>
+      <div class="flex space-x-4 text-[18px] font-extrabold tracking-[-0.07em] uppercase items-center">
+        <a href="../../src/works.html" class="hover:opacity-50 transition">
+            <span class="lang-fr">Projets</span><span class="lang-en hidden">Works</span>
+        </a>
+        <a href="../../src/About.html" class="hover:opacity-50 transition">
+            <span class="lang-fr">À propos</span><span class="lang-en hidden">About</span>
+        </a>
+        <button id="lang-switch" class="border-2 border-black px-2 py-0.5 hover:bg-black hover:text-white transition text-[14px] font-bold">
+            EN
+        </button>
       </div>
     </div>
   </header>
@@ -68,37 +75,57 @@
           </h1>
           
           <p class="text-[22px] font-bold normal-case tracking-[-0.07em] mb-6 leading-[1.1]">
-            Identité Visuelle
+            <span class="lang-fr">Identité Visuelle</span><span class="lang-en hidden">Visual Identity</span>
           </p>
 
           <p class="text-[18px] font-extrabold normal-case tracking-[-0.07em] mb-9 leading-[1.1]">
-            Contexte : <span class="text-gray-400 font-bold">Stage chez Universal Music France</span><br>
-            Lieu : <span class="text-gray-400 font-bold">Paris</span>
+            <span class="lang-fr">Contexte : <span class="text-gray-400 font-bold">Stage chez Universal Music France</span></span>
+            <span class="lang-en hidden">Context: <span class="text-gray-400 font-bold">Internship at Universal Music France</span></span>
+            <br>
+            <span class="lang-fr">Lieu : <span class="text-gray-400 font-bold">Paris</span></span>
+            <span class="lang-en hidden">Location: <span class="text-gray-400 font-bold">Paris</span></span>
           </p>
 
           <div class="flex flex-col space-y-1 mb-9 text-[18px] font-extrabold normal-case tracking-[-0.07em]">
-            <label for="tab-livrables" class="cursor-pointer hover:opacity-50 transition-opacity" id="label-livrables">➤ Livrables</label>
-            <label for="tab-recherches" class="cursor-pointer hover:opacity-50 transition-opacity" id="label-recherches">➤ Recherches</label>
+            <label for="tab-livrables" class="cursor-pointer hover:opacity-50 transition-opacity" id="label-livrables">
+                <span class="lang-fr">➤ Livrables</span><span class="lang-en hidden">➤ Deliverables</span>
+            </label>
+            <label for="tab-recherches" class="cursor-pointer hover:opacity-50 transition-opacity" id="label-recherches">
+                <span class="lang-fr">➤ Recherches</span><span class="lang-en hidden">➤ Research</span>
+            </label>
           </div>
 
           <div class="max-w-sm">
             <div id="text-livrables-long">
-              <p class="text-[15px] text-gray-400 font-bold tracking-[-0.07em] leading-[1.1] text-left">
+              <div class="text-[15px] text-gray-400 font-bold tracking-[-0.07em] leading-[1.1] text-left lang-fr">
                 Lors de mon stage et dans le cadre d'un projet de restructuration porté par la présidence d'Universal Music France, j'ai eu la chance de travailler en collaboration avec Eva Chan directrice artistique sur la refonte globale de l'identité de cinq agences internes.<br>
                 <br>
                 J'ai conçu trois logotypes distincts, chacun répondant à des enjeux de communication spécifiques différents :<br><br>
                 <strong>Maison Export :</strong> Un logotype basé sur l’amplification et le rayonnement international.<br><br>
                 <strong>La Promo :</strong> Une identité axée sur les notions d’écho, de réseau et de performance média.<br><br>
                 <strong>Études & Publicité :</strong> Un univers graphique minimaliste évoquant l’expertise, le ciblage (targeting) et l'analyse de données.
-              </p>
+              </div>
+              <div class="text-[15px] text-gray-400 font-bold tracking-[-0.07em] leading-[1.1] text-left lang-en hidden">
+                During my internship, as part of a restructuring project led by the presidency of Universal Music France, I had the chance to work in collaboration with Art Director Eva Chan on the global identity redesign of five internal agencies.<br>
+                <br>
+                I designed three distinct logotypes, each addressing different specific communication challenges:<br><br>
+                <strong>Maison Export:</strong> A logotype based on amplification and international outreach.<br><br>
+                <strong>La Promo:</strong> An identity focused on the notions of echo, network, and media performance.<br><br>
+                <strong>Études & Publicité:</strong> A minimalist graphic universe evoking expertise, targeting, and data analysis.
+              </div>
             </div>
 
             <div id="text-recherches-long" class="hidden">
-              <p class="text-[15px] text-gray-400 font-bold tracking-[-0.07em] leading-[1.1] text-left">
+              <div class="text-[15px] text-gray-400 font-bold tracking-[-0.07em] leading-[1.1] text-left lang-fr">
                 <strong>Maison Export :</strong> Un logotype basé sur l’amplification et le rayonnement international.<br><br>
                 <strong>La Promo :</strong> Une identité axée sur les notions d’écho, de réseau et de performance média.<br><br>
                 <strong>Études & Publicité :</strong> Un univers graphique minimaliste évoquant l’expertise, le ciblage (targeting) et l'analyse de données.
-              </p>
+              </div>
+              <div class="text-[15px] text-gray-400 font-bold tracking-[-0.07em] leading-[1.1] text-left lang-en hidden">
+                <strong>Maison Export:</strong> A logotype based on amplification and international outreach.<br><br>
+                <strong>La Promo:</strong> An identity focused on the notions of echo, network, and media performance.<br><br>
+                <strong>Études & Publicité:</strong> A minimalist graphic universe evoking expertise, targeting, and data analysis.
+              </div>
             </div>
           </div>
         </div>
@@ -136,12 +163,36 @@
   </main>
 
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const videos = document.querySelectorAll('video');
-        videos.forEach(video => {
-            video.play().catch(error => { console.log("Auto-play blocked"); });
+document.addEventListener('DOMContentLoaded', () => {
+    const langBtn = document.getElementById('lang-switch');
+    
+    function applyLanguage(lang) {
+        const frElements = document.querySelectorAll('.lang-fr');
+        const enElements = document.querySelectorAll('.lang-en');
+
+        if (lang === 'en') {
+            frElements.forEach(el => el.classList.add('hidden'));
+            enElements.forEach(el => el.classList.remove('hidden'));
+            if(langBtn) langBtn.innerText = 'FR';
+        } else {
+            enElements.forEach(el => el.classList.add('hidden'));
+            frElements.forEach(el => el.classList.remove('hidden'));
+            if(langBtn) langBtn.innerText = 'EN';
+        }
+    }
+
+    // Récupération immédiate au chargement
+    let currentLang = localStorage.getItem('selectedLang') || 'fr';
+    applyLanguage(currentLang);
+
+    if(langBtn) {
+        langBtn.addEventListener('click', () => {
+            currentLang = (currentLang === 'fr') ? 'en' : 'fr';
+            localStorage.setItem('selectedLang', currentLang);
+            applyLanguage(currentLang);
         });
-    });
-  </script>
+    }
+});
+</script>
 </body>
 </html>

@@ -54,9 +54,16 @@
       <a href="../../src/works.html" class="text-[35px] font-extrabold hover:-translate-x-2 transition-transform duration-300 leading-none">
         ←
       </a>
-      <div class="flex space-x-8 text-[18px] font-extrabold tracking-[-0.07em] uppercase">
-        <a href="../../src/works.html" class="hover:opacity-50 transition">Projets</a>
-        <a href="../../src/About.html" class="hover:opacity-50 transition">À propos</a>
+      <div class="flex space-x-4 text-[18px] font-extrabold tracking-[-0.07em] uppercase items-center">
+        <a href="../../src/works.html" class="hover:opacity-50 transition">
+            <span class="lang-fr">Projets</span><span class="lang-en hidden">Works</span>
+        </a>
+        <a href="../../src/About.html" class="hover:opacity-50 transition">
+            <span class="lang-fr">À propos</span><span class="lang-en hidden">About</span>
+        </a>
+        <button id="lang-switch" class="border-2 border-black px-2 py-0.5 hover:bg-black hover:text-white transition text-[14px] font-bold">
+            EN
+        </button>
       </div>
     </div>
   </header>
@@ -74,33 +81,49 @@
           </h1>
           
           <p class="text-[22px] font-bold normal-case tracking-[-0.07em] mb-6 leading-[1.1]">
-            Direction Artistique, Identité Visuelle
+            <span class="lang-fr">Direction Artistique, Identité Visuelle</span>
+            <span class="lang-en hidden">Art Direction, Visual Identity</span>
           </p>
 
           <p class="text-[18px] font-extrabold normal-case tracking-[-0.07em] mb-9 leading-[1.1]">
             Client : <span class="text-gray-400 font-bold">Eva Banks, Duat</span><br>
-            Lieu : <span class="text-gray-400 font-bold">STEREO Covent Garden, London</span>
+            <span class="lang-fr">Lieu : <span class="text-gray-400 font-bold">STEREO Covent Garden, London</span></span>
+            <span class="lang-en hidden">Location: <span class="text-gray-400 font-bold">STEREO Covent Garden, London</span></span>
           </p>
 
           <div class="flex flex-col space-y-1 mb-9 text-[18px] font-extrabold normal-case tracking-[-0.07em]">
-            <label for="tab-livrables" class="cursor-pointer hover:opacity-50 transition-opacity" id="label-livrables">➤ Livrables</label>
-            <label for="tab-recherches" class="cursor-pointer hover:opacity-50 transition-opacity" id="label-recherches">➤ Recherches</label>
+            <label for="tab-livrables" class="cursor-pointer hover:opacity-50 transition-opacity" id="label-livrables">
+                <span class="lang-fr">➤ Livrables</span><span class="lang-en hidden">➤ Deliverables</span>
+            </label>
+            <label for="tab-recherches" class="cursor-pointer hover:opacity-50 transition-opacity" id="label-recherches">
+                <span class="lang-fr">➤ Recherches</span><span class="lang-en hidden">➤ Research</span>
+            </label>
           </div>
 
           <div class="max-w-sm">
             <div id="text-livrables-long">
-              <p class="text-[15px] text-gray-400 font-bold tracking-[-0.07em] leading-[1.1] text-left">
-                Eva Banks et Duat, deux DJ basé à Londres, ont lancé un concept de soirées mensuelles centré autour de la musique Deep Houses. Ils recherchaient une identité visuelle dynamique, capable de vivre sur tous les supports de communication digitale et physique.<br>
+              <p class="text-[15px] text-gray-400 font-bold tracking-[-0.07em] leading-[1.1] text-left lang-fr">
+                Eva Banks et Duat, deux DJ basé à Londres, ont lancé un concept de soirées mensuelles centré autour de la musique Deep House. Ils recherchaient une identité visuelle dynamique, capable de vivre sur tous les supports de communication digitale et physique.<br>
                 <br>
                 J'ai conçu un logotype adaptatif basé sur la représentation graphique des fréquences sonores. Au-delà du signe, j'ai développé une charte graphique vibrante et des déclinaisons animées (motion design) qui traduisent l'évolution du tempo de la soirée.
+              </p>
+              <p class="text-[15px] text-gray-400 font-bold tracking-[-0.07em] leading-[1.1] text-left lang-en hidden">
+                London-based DJs Eva Banks and Duat launched a monthly event concept centered around Deep House music. They were looking for a dynamic visual identity capable of existing across all digital and physical communication channels.<br>
+                <br>
+                I designed an adaptive logotype based on the graphic representation of sound frequencies. Beyond the mark itself, I developed a vibrant brand identity and motion designs that translate the evolving tempo of the event.
               </p>
             </div>
 
             <div id="text-recherches-long" class="hidden">
-              <p class="text-[15px] text-gray-400 font-bold tracking-[-0.07em] leading-[1.1] text-left">
+              <p class="text-[15px] text-gray-400 font-bold tracking-[-0.07em] leading-[1.1] text-left lang-fr">
                 La recherche graphique s'est portée sur la visualisation des ondes sonores et leur transformation en motifs géométriques. L'idée était de créer un système capable de "pulser" visuellement comme la musique.<br>
                 <br>
                 Les planches de recherches explorent différentes épaisseurs de traits et de rythmes visuels, cherchant le point d'équilibre entre abstraction mathématique et énergie nocturne londonienne.
+              </p>
+              <p class="text-[15px] text-gray-400 font-bold tracking-[-0.07em] leading-[1.1] text-left lang-en hidden">
+                Graphic research focused on the visualization of sound waves and their transformation into geometric patterns. The goal was to create a system capable of visually "pulsing" just like the music.<br>
+                <br>
+                The research boards explore different line weights and visual rhythms, seeking the balance between mathematical abstraction and London's nightlife energy.
               </p>
             </div>
           </div>
@@ -135,12 +158,36 @@
   </main>
 
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const videos = document.querySelectorAll('video');
-        videos.forEach(video => {
-            video.play().catch(error => { console.log("Auto-play blocked"); });
+document.addEventListener('DOMContentLoaded', () => {
+    const langBtn = document.getElementById('lang-switch');
+    
+    function applyLanguage(lang) {
+        const frElements = document.querySelectorAll('.lang-fr');
+        const enElements = document.querySelectorAll('.lang-en');
+
+        if (lang === 'en') {
+            frElements.forEach(el => el.classList.add('hidden'));
+            enElements.forEach(el => el.classList.remove('hidden'));
+            if(langBtn) langBtn.innerText = 'FR';
+        } else {
+            enElements.forEach(el => el.classList.add('hidden'));
+            frElements.forEach(el => el.classList.remove('hidden'));
+            if(langBtn) langBtn.innerText = 'EN';
+        }
+    }
+
+    // Récupération immédiate au chargement
+    let currentLang = localStorage.getItem('selectedLang') || 'fr';
+    applyLanguage(currentLang);
+
+    if(langBtn) {
+        langBtn.addEventListener('click', () => {
+            currentLang = (currentLang === 'fr') ? 'en' : 'fr';
+            localStorage.setItem('selectedLang', currentLang);
+            applyLanguage(currentLang);
         });
-    });
-  </script>
+    }
+});
+</script>
 </body>
 </html>

@@ -31,6 +31,10 @@
             transform: rotate(360deg);
         }
 
+        .hidden {
+            display: none;
+        }
+
         /* Optionnel : gestion du reveal si tu as une animation dans main.js */
         .reveal {
             opacity: 1;
@@ -41,16 +45,34 @@
 
     <div id="app">
         
-        <header class="max-w-[1400px] mx-auto px-6 pt-8">
-            <div class="border-b-[3px] border-black pb-4 flex justify-end space-x-8 text-[18px] font-extrabold tracking-[-0.07em] uppercase">
-                <a href="src/works.html" class="hover:opacity-50 transition">Projets</a>
-                <a href="src/About.html" class="hover:opacity-50 transition">À propos</a>
-            </div>
-        </header>
+        <!-- Remplacement de mr-9 par mx-auto pour centrer parfaitement tout le bloc -->
+<header class="max-w-[1400px] mx-auto px-6 pt-8">
+    <div class="border-b-[3px] border-black pb-4 flex justify-end items-center text-[18px] font-extrabold tracking-[-0.07em] uppercase">
+        <!-- Tes liens restent décalés vers la gauche par rapport au bouton EN -->
+        <div class="flex space-x-4 mr-6">
+            <a href="src/works.html" class="hover:opacity-50 transition">
+                <span class="lang-fr">Projets</span><span class="lang-en hidden">Works</span>
+            </a>
+            <a href="src/About.html" class="hover:opacity-50 transition">
+                <span class="lang-fr">À propos</span><span class="lang-en hidden">About</span>
+            </a>
+        </div>
+        
+        <button id="lang-switch" class="border-2 border-black px-2 py-0.5 hover:bg-black hover:text-white transition text-[14px] font-bold">
+            EN
+        </button>
+    </div>
+</header>
 
         <main class="max-w-[1400px] mx-auto px-6 mt-10">
+            <!-- Texte d'introduction traduit -->
             <h1 class="reveal text-[55px] md:text-[65px] leading-[1.05] font-bold tracking-tight max-w-[1200px]">
-                Bonjour, je m’appelle <span class="italic text-[#D90000]">Charlotte Léger</span>, je suis en recherche d’une école ainsi que d’une alternance pour la <span class="italic text-[#D90000]">rentrée 2026</span>.
+                <span class="lang-fr">
+                    Bonjour, je m’appelle <span class="italic text-[#D90000]">Charlotte Léger</span>, je suis en recherche d’une alternance pour la <span class="italic text-[#D90000]">rentrée 2026</span>.
+                </span>
+                <span class="lang-en hidden">
+                    Hello, my name is <span class="italic text-[#D90000]">Charlotte Léger</span>, I am currently looking for an apprenticeship for the <span class="italic text-[#D90000]">2026 academic year</span>.
+                </span>
             </h1>
         </main>
 
@@ -67,6 +89,40 @@
     </div>
 
     <script type="module" src="/src/main.js"></script>
+
+    <!-- SCRIPT DE TRADUCTION -->
+    <script>
+document.addEventListener('DOMContentLoaded', () => {
+    const langBtn = document.getElementById('lang-switch');
+    
+    function applyLanguage(lang) {
+        const frElements = document.querySelectorAll('.lang-fr');
+        const enElements = document.querySelectorAll('.lang-en');
+
+        if (lang === 'en') {
+            frElements.forEach(el => el.classList.add('hidden'));
+            enElements.forEach(el => el.classList.remove('hidden'));
+            if(langBtn) langBtn.innerText = 'FR';
+        } else {
+            enElements.forEach(el => el.classList.add('hidden'));
+            frElements.forEach(el => el.classList.remove('hidden'));
+            if(langBtn) langBtn.innerText = 'EN';
+        }
+    }
+
+    // Récupération immédiate au chargement
+    let currentLang = localStorage.getItem('selectedLang') || 'fr';
+    applyLanguage(currentLang);
+
+    if(langBtn) {
+        langBtn.addEventListener('click', () => {
+            currentLang = (currentLang === 'fr') ? 'en' : 'fr';
+            localStorage.setItem('selectedLang', currentLang);
+            applyLanguage(currentLang);
+        });
+    }
+});
+</script>
 
 </body>
 </html>
