@@ -167,36 +167,88 @@
   </main>
 
   <script>
-document.addEventListener('DOMContentLoaded', () => {
-    const langBtn = document.getElementById('lang-switch');
-    
-    function applyLanguage(lang) {
-        const frElements = document.querySelectorAll('.lang-fr');
-        const enElements = document.querySelectorAll('.lang-en');
+    // --- GESTION DU SLIDER ---
+    let currentSlide = 0;
 
-        if (lang === 'en') {
-            frElements.forEach(el => el.classList.add('hidden'));
-            enElements.forEach(el => el.classList.remove('hidden'));
-            if(langBtn) langBtn.innerText = 'FR';
+    function updateSlider() {
+      const slides = document.querySelectorAll('.slider-container .slide');
+      const prevBtn = document.querySelector('.nav-btn.prev');
+      const nextBtn = document.querySelector('.nav-btn.next');
+
+      if (!slides.length) return;
+
+      // Masquer toutes les slides et afficher uniquement l'active
+      slides.forEach((slide, index) => {
+        if (index === currentSlide) {
+          slide.classList.add('active');
         } else {
-            enElements.forEach(el => el.classList.add('hidden'));
-            frElements.forEach(el => el.classList.remove('hidden'));
-            if(langBtn) langBtn.innerText = 'EN';
+          slide.classList.remove('active');
         }
+      });
+
+      // Gestion de l'état des boutons (désactivés aux extrémités)
+      if (prevBtn) {
+        if (currentSlide === 0) {
+          prevBtn.classList.add('disabled');
+        } else {
+          prevBtn.classList.remove('disabled');
+        }
+      }
+
+      if (nextBtn) {
+        if (currentSlide === slides.length - 1) {
+          nextBtn.classList.add('disabled');
+        } else {
+          nextBtn.classList.remove('disabled');
+        }
+      }
     }
 
-    // Récupération immédiate au chargement
-    let currentLang = localStorage.getItem('selectedLang') || 'fr';
-    applyLanguage(currentLang);
+    // Fonction appelée directement lors du clic sur les flèches
+    function changeSlide(direction) {
+      const slides = document.querySelectorAll('.slider-container .slide');
+      
+      currentSlide += direction;
 
-    if(langBtn) {
-        langBtn.addEventListener('click', () => {
-            currentLang = (currentLang === 'fr') ? 'en' : 'fr';
-            localStorage.setItem('selectedLang', currentLang);
-            applyLanguage(currentLang);
-        });
+      if (currentSlide < 0) currentSlide = 0;
+      if (currentSlide >= slides.length) currentSlide = slides.length - 1;
+
+      updateSlider();
     }
-});
-</script>
+
+    // --- GESTION DE LA LANGUE ET INITIALISATION ---
+    document.addEventListener('DOMContentLoaded', () => {
+      // Initialise l'état du slider
+      updateSlider();
+
+      const langBtn = document.getElementById('lang-switch');
+      
+      function applyLanguage(lang) {
+          const frElements = document.querySelectorAll('.lang-fr');
+          const enElements = document.querySelectorAll('.lang-en');
+
+          if (lang === 'en') {
+              frElements.forEach(el => el.classList.add('hidden'));
+              enElements.forEach(el => el.classList.remove('hidden'));
+              if(langBtn) langBtn.innerText = 'FR';
+          } else {
+              enElements.forEach(el => el.classList.add('hidden'));
+              frElements.forEach(el => el.classList.remove('hidden'));
+              if(langBtn) langBtn.innerText = 'EN';
+          }
+      }
+
+      let currentLang = localStorage.getItem('selectedLang') || 'fr';
+      applyLanguage(currentLang);
+
+      if(langBtn) {
+          langBtn.addEventListener('click', () => {
+              currentLang = (currentLang === 'fr') ? 'en' : 'fr';
+              localStorage.setItem('selectedLang', currentLang);
+              applyLanguage(currentLang);
+          });
+      }
+    });
+  </script>
 </body>
 </html>
